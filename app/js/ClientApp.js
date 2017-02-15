@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Title from './Title'
+import Title from './Title.js'
+
 
 var div = React.DOM.div
 
 var TitleFactory = React.createFactory(Title)
+
 
 var MainComponent = React.createClass({
   render: function () {
