@@ -17,10 +17,26 @@ module.exports = {
     chunks: true,
   },
   module: {
-    rules: [
-      { 
+    loaders: [
+      {
         test: /\.js$/,
-        loader: 'babel-loader'
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader', 
+          {
+            loader: 'css-loader',
+            options: {
+              url: false
+            }
+          }
+        ]
       }
     ]
   }
