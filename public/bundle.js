@@ -1265,7 +1265,14 @@ eval("/**\n * Copyright 2013-present, Facebook, Inc.\n * All rights reserved.\n 
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("'use strict';\n\nvar _react = __webpack_require__(87);\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(86);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n//////////////////\n// WEBPACK FOOTER\n// ./app/js/ClientApp.js\n// module id = 171\n// module chunks = 0\n\n//# sourceURL=webpack:///./app/js/ClientApp.js?");
+eval("'use strict';\n\nvar _react = __webpack_require__(87);\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(86);\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _Title = __webpack_require__(172);\n\nvar _Title2 = _interopRequireDefault(_Title);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar MainComponent = _react2.default.createClass({\n  displayName: 'MainComponent',\n\n  render: function render() {\n    return _react2.default.createElement(\n      'div',\n      null,\n      _react2.default.createElement(_Title2.default, { title: 'props brah', color: 'peru' }),\n      _react2.default.createElement(_Title2.default, { title: 'props yoppph', color: 'blue' }),\n      _react2.default.createElement(_Title2.default, { title: 'props homie', color: 'tomato' }),\n      _react2.default.createElement(_Title2.default, { title: 'props homie meow', color: 'rebeccapurple' })\n    );\n  }\n}); /* global React ReactDOM */\n\n\n_reactDom2.default.render(_react2.default.createElement(MainComponent), document.getElementById('app'));\n\n//////////////////\n// WEBPACK FOOTER\n// ./app/js/ClientApp.js\n// module id = 171\n// module chunks = 0\n\n//# sourceURL=webpack:///./app/js/ClientApp.js?");
+
+/***/ },
+/* 172 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(87);\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar MyTitle = _react2.default.createClass({\n  displayName: 'MyTitle',\n\n  render: function render() {\n    var style = { color: this.props.color };\n    return _react2.default.createElement(\n      'div',\n      null,\n      _react2.default.createElement(\n        'h1',\n        { style: style },\n        this.props.title\n      )\n    );\n  }\n});\n\nexports.default = MyTitle;\n\n//////////////////\n// WEBPACK FOOTER\n// ./app/js/Title.js\n// module id = 172\n// module chunks = 0\n\n//# sourceURL=webpack:///./app/js/Title.js?");
 
 /***/ }
 /******/ ]);
