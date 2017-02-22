@@ -5,7 +5,8 @@
   "scripts": {
       "lint": "eslint js/**/*,js webpack.config.js",
       "dev": "webpack-dev-server",
-      "build": "webpack"
+      "build": "webpack",
+      "test": "NODE_ENV=test jest"
     },
     "dependencies": {
       "axios": "^0.15.3",
