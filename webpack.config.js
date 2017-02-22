@@ -5,8 +5,12 @@ module.exports = {
   entry: './app/js/ClientApp.js',
   devtool: 'eval',
   output: {
-    path: path.join(__dirname, './public'),
+    path: path.join(__dirname, '/public'),
     filename: 'bundle.js'
+  },
+  devServer: {
+    publicPath: '/public/',
+    historyApiFallback: true
   },
   resolve: {
     extensions: ['.js', '.json']
@@ -14,10 +18,20 @@ module.exports = {
   stats: {
     colors: true,
     reasons: true,
-    chunks: true,
+    chunks: true
   },
   module: {
     loaders: [
+      { 
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        exclude: '/node_modules/'
+      }, 
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
@@ -29,7 +43,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader', 
+          'style-loader',
           {
             loader: 'css-loader',
             options: {

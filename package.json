@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-      "lint": "standard",
+      "lint": "eslint js/**/*,js webpack.config.js",
+      "dev": "webpack-dev-server",
       "build": "webpack"
     },
     "dependencies": {
