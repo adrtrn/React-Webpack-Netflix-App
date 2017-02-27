@@ -14,7 +14,7 @@ const App = React.createClass({
   render () {
     return (
       <BrowserRouter>
-        <Provider store={store}> {/* state store is plugged here */}
+        <Provider store={store}> 
           <div className='app'>
             <Match exactly pattern='/' component={Landing} />
             <Match
