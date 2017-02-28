@@ -6,7 +6,8 @@ module.exports = {
   devtool: 'eval',
   output: {
     path: path.join(__dirname, '/public'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/public' //tells webpack where to get additional bundles
   },
   devServer: {
     publicPath: '/public/',
