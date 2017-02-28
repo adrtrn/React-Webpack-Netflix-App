@@ -14,7 +14,7 @@ const App = React.createClass({
   render () {
     return (
       <BrowserRouter>
-        <Provider store={store}> 
+        <Provider store={store}>
           <div className='app'>
             <Match exactly pattern='/' component={Landing} />
             <Match
